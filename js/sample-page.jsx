@@ -18,7 +18,7 @@ import {
   TeamMember,
 } from "neal-react";
 
-const brandName = "SamplePage";
+const brandName = "Колыгин Дмитрий";
 const brand = <span>{brandName}</span>;
 
 const onSignup = ({ name: name, email: email, password: password }) => Stripe.StripeHandler.open({
@@ -91,13 +91,16 @@ const sampleCode = `<Page>
 </Page>
 `;
 
-
 export default (props) => {
   return (
     <Page>
 
       <Navbar brand={brand}>
-        <NavItem><Link to="Home" className="nav-link">Home</Link></NavItem>
+        <NavItem><Link to="Home" className="nav-link">Главная</Link></NavItem>
+        <NavItem><Link to="Home" className="nav-link">Услуги</Link></NavItem>
+        <NavItem><Link to="Home" className="nav-link">Обо мне</Link></NavItem>
+        <NavItem><Link to="Home" className="nav-link">Публикации</Link></NavItem>
+        <NavItem><Link to="Home" className="nav-link">Контакты</Link></NavItem>
         <NavItem dropdown={true}>
           <DropdownToggle>Github</DropdownToggle>
           <DropdownMenu>
@@ -113,67 +116,18 @@ export default (props) => {
 
       <Hero backgroundImage="img/hero-bg-01.jpg"
         className="text-xs-center">
-        <h1 className="display-4"> Declarative Landing Pages for React.js </h1>
-        <p className="lead">Build a beautiful landing page in less than an hour.
-          No more redundant code. Easily extensible.</p>
+        <img src="img/people/новое_фото.jpg" alt="" className="round"/>
+        <p className="lead">Здравствуйте, меня зовут Дмитрий Колыгин.
+          Я - психолог, специализируюсь на индивидуальной и семейной психологи.
+          Помогу изменить качество Вашей жизни к лучшему:
+          Снизить уровень стресса и тревоги;
+          Наладить семейные отношения(супружеские/детско-родительские);
+          Преодолеть жизненные кризисы или психологические травмы;
+          Разобраться в себе и стать активным автором собственной жизни;
+          8 925 464 86 10 | kolygin.d@gmail.com</p>
         <p>
-          <a href="https://github.com/dennybritz/neal-react" target="_blank" className="btn btn-white">
-            Get it on Github
-          </a>
         </p>
       </Hero>
-
-      <Section className="subhero">
-        <ImageList centered>
-          <ImageListItem src="img/press/cnn-logo.png" url="http://www.cnn.com"/>
-          <ImageListItem src="img/press/forbes-logo.png" url="http://forbes.com/"/>
-          <ImageListItem src="img/press/theverge-logo.png" url="http://www.theverge.com/"/>
-          <ImageListItem src="img/press/techcrunch-logo.jpg" url="http://techcrunch.com/"/>
-        </ImageList>
-      </Section>
-
-      <Section className="nopad-bottom">
-        <Code lang="jsx" block>{sampleCode}</Code>
-      </Section>
-
-      <Section>
-        <HorizontalSplit padding="md">
-          <div>
-            <p className="lead">Batteries Included</p>
-            <p>Neal is based on <a href="http://v4-alpha.getbootstrap.com/" target="_blank">Bootstrap 4</a> and ships with navbar, hero, footer, sections, horizontal split, pricing tables, customer quotes and other components you need for a landing page. No more repetitive coding! Oh, and it's easy to extend.</p>
-          </div>
-          <div>
-            <p className="lead">Third-Party Integrations</p>
-            <p>External integrations like &nbsp;
-              <a href="http://www.google.com/analytics/">Google Analytics</a>,&nbsp;
-              <a href="https://segment.com/">Segment</a>,&nbsp;
-              <a href="https://stripe.com/">Stripe</a> and&nbsp;
-              <a href="http://typeform.com">Typeform</a> are included.
-              No more copying & pasting integration code, all you need is your API keys. We automatically track events when visitors navigate to different parts of your page.</p>
-          </div>
-          <div>
-            <p className="lead">Serverless Deployment</p>
-            <p>Because you are relying on react.js and third-party integration you don't need a server to host your landing page. Simply upload it to an Amazon S3 bucket, enable website hosting, and it's ready to go!</p>
-          </div>
-        </HorizontalSplit>
-      </Section>
-
-      <Section heading="Inline and Modal Signup components" className="gray">
-        <p>Use these components to capture user data, display a payment dialog and/or send them to your own backend for handling. Of course, you could also just use a Typeform to collect user emails. </p>
-        <SignupInline onSubmit={onSignup}/>
-        <SignupModal modalId="signup-modal" onSubmit={onSignup}/>
-        <p>
-          <a className="btn btn-primary btn-ghost" data-toggle="modal" data-target="#signup-modal">Show Signup modal</a>
-        </p>
-      </Section>
-
-      <Section>
-        <PricingTable>
-          <PricingPlan {... pricingPlan1} />
-          <PricingPlan {... pricingPlan2} />
-          <PricingPlan {... pricingPlan3} />
-        </PricingTable>
-      </Section>
 
       <Section>
         <CustomerQuotes>
@@ -191,14 +145,17 @@ export default (props) => {
 
       <Section>
         <Team>
-          <TeamMember name="Member 1" title="Co-founder" imageUrl="img/people/grumpycat.jpg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <TeamMember name="Индивидуальная консультация психолога" title="" imageUrl="http://mariadolgopolova.ru/images/individual-counseling-of-a-psychologist.png">
+            Если вы оказались в трудной жизненной ситуации, утратили душевный покой, у вас есть вопросы к себе и близким, сомнения, страхи, вы можете прийти ко мне на консультацию для того, чтобы помочь себе с этим справиться.
           </TeamMember>
-          <TeamMember name="Member 2" title="Co-founder" imageUrl="img/people/boo.jpg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <TeamMember name="Консультация психолога онлайн" title="" imageUrl="http://mariadolgopolova.ru/images/psychological-counseling-online-skype.png">
+            Я также консультирую в Skype™. Занимаюсь адаптацией классических техник в онлайн-формат. Как бы сильно я ни ценила личное общение, жизнь вносит свои коррективы. Несовпадение расписаний, загруженный график работы, эмиграция, маленькие дети и другие радости жизни не обязаны быть помехой для психологической работы.
           </TeamMember>
-          <TeamMember name="Member 3" title="Co-founder" imageUrl="img/people/panda.jpg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <TeamMember name="Психологическое консультирование пар" title="" imageUrl="http://mariadolgopolova.ru/images/counseling-couples.png">
+            Для супружеских и других пар, которые хотят изменить, прояснить или улучшить отношения друг с другом.
+          </TeamMember>
+          <TeamMember name="Семейное консультирование для детей и родителей" title="" imageUrl="http://mariadolgopolova.ru/images/family-counseling-children-and-parents.png">
+            ‒ которые хотят восстановить, улучшить отношения с «трудным» ребенком / выбирают для себя подходящую родительскую позицию и линию поведения / ищут новые способы помочь ребенку (замкнутость, агрессивность, повторяющиеся неудачи, низкий контроль эмоций)
           </TeamMember>
         </Team>
       </Section>
